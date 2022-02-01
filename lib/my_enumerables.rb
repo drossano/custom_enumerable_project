@@ -44,8 +44,16 @@ module Enumerable
       end
       count
     else
-      self.length
+      length
     end
+  end
+
+  def my_map
+    arr = []
+    my_each do |element|
+      arr << yield(element)
+    end
+    arr
   end
 end
 

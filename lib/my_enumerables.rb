@@ -1,5 +1,11 @@
 module Enumerable
-  # Your code goes here
+  def my_each_with_index
+    index = 0
+    my_each do |element|
+      yield [element, index]
+      index += 1
+    end
+  end
 end
 
 # You will first have to define my_each

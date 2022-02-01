@@ -14,6 +14,13 @@ module Enumerable
     end
     arr
   end
+
+  def my_all?
+    my_each do |element|
+      return false if yield(element) == false
+    end
+    true
+  end
 end
 
 # You will first have to define my_each

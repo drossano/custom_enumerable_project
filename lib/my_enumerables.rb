@@ -73,7 +73,7 @@ class Array
   # Define my_each here
   def my_each
     index = 0
-    until index == self.length
+    until index == length
       p yield (self[index])
       index += 1
     end
